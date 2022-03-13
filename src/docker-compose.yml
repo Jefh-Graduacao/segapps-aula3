@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+    container_name: sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=4Jgz2HmDKS
+      - MSSQL_PID=Developer
+    ports:
+      - "5433:1433"
+    volumes:
+      - sqlvolume:/var/opt/mssql
+
+volumes:
+  sqlvolume:
