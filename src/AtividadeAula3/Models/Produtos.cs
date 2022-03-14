@@ -1,1 +1,0 @@
-public record Produto(string Id, string Nome, decimal Valor);
